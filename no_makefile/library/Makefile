@@ -12,10 +12,11 @@ SRC:=$(wildcard *.c)
 OBJS:=$(SRC:.c=.o)
 HEADERS=$(wildcard *.h)
 
+.PHONY: all lib clean install uninstall
+
 all: $(LIB) $(BIN)
 lib: $(LIB)
-
-.PHONY: all lib clean install uninstall
+bin: $(BIN)
 
 $(LIB): $(OBJS)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ $^ $(LDFLAGS)

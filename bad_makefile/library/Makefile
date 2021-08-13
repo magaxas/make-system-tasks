@@ -7,9 +7,9 @@ SRC:=$(wildcard *.c)
 OBJS:=$(SRC:.c=.o)
 HEADERS=$(wildcard *.h)
 
-all: $(LIB)
-
 .PHONY: all clean install uninstall
+
+all: $(LIB)
 
 $(LIB): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
