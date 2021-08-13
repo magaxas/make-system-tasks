@@ -15,7 +15,7 @@ HEADERS=$(wildcard *.h)
 all: $(LIB) $(BIN)
 lib: $(LIB)
 
-.PHONY: all clean install uninstall
+.PHONY: all lib clean install uninstall
 
 $(LIB): $(OBJS)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ $^ $(LDFLAGS)
